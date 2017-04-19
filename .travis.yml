@@ -70,7 +70,7 @@ install:
   - export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:`pwd`"
 
 script:
-  - EMBEDROCKSDB=0 make cover_ci
+  - EMBEDROCKSDB=0 make -j4 cover_ci
   - EMBEDROCKSDB=0 make -j2 bins
 
 after_success:
